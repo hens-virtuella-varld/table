@@ -1,16 +1,14 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
+
 import { ProductRow } from './components/ProductRow';
 import { ThemeTogglerIcon } from './components/ThemeTogglerIcon';
 
 import data from './data.json';
 
 export default function Home() {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
-  useEffect(() => {
-    document.body.className = isDarkTheme ? 'dark' : 'light';
-  }, [isDarkTheme]);
+  const { theme, setTheme } = useTheme();
 
   const products = data.products;
 
@@ -19,9 +17,7 @@ export default function Home() {
       <button
         className='bg-gray-400 bg-opacity-30 fixed right-6 bottom-6 hover:bg-opacity-50  active:bg-gray-500'
         aria-label='Theme Toggler'
-        onClick={() => {
-          setIsDarkTheme(!isDarkTheme);
-        }}
+        onClick={() => (theme == 'dark' ? setTheme('light') : setTheme('dark'))}
       >
         {<ThemeTogglerIcon className={'w-10 h-10'} />}
       </button>
