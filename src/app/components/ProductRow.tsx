@@ -27,7 +27,7 @@ export const ProductRow = ({
   className,
 }: ProductRowProps) => {
   return (
-    <tr className=' [&:nth-child(3n)]:bg-amber-200'>
+    <tr className=' even:bg-amber-200'>
       <td className={clsx(className)}>{id}</td>
       <td className={clsx(className)}>{title}</td>
       <td className={clsx(className)}>
@@ -39,8 +39,12 @@ export const ProductRow = ({
       <td className={clsx(className)}>{stock}</td>
       <td className={clsx(className)}>{brand}</td>
       <td className={clsx(className)}>{category}</td>
+
       <td className={clsx(className)}>
-        <a href={thumbnail} target='_blank'>
+        <a className='lg:hidden' href={thumbnail} target='_blank'>
+          Link
+        </a>
+        <a className='max-lg:hidden' href={thumbnail} target='_blank'>
           <img src={thumbnail} width='50' />
         </a>
       </td>

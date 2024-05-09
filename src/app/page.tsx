@@ -8,8 +8,8 @@ export default function Home() {
   const products = data.products;
 
   return (
-    <main className='p-5 bg-white'>
-      <table className='table-auto text-left'>
+    <main className='p-5'>
+      <table className='text-left'>
         <thead>
           <tr>
             <th>ID</th>
@@ -21,7 +21,7 @@ export default function Home() {
             <th className='pr-3'>Stock</th>
             <th>Brand</th>
             <th>Category</th>
-            <th>Thumbnail</th>
+            <th>Image</th>
           </tr>
         </thead>
         <tbody>
