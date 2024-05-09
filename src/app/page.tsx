@@ -13,7 +13,7 @@ export default function Home() {
   const products = data.products;
 
   return (
-    <main className='p-5 flex md:justify-center font-mono dark:bg-gray-700 dark:text-slate-300'>
+    <main className='p-5 flex md:justify-center font-mono text-slate-700 dark:text-slate-300'>
       <button
         className='bg-gray-400 bg-opacity-30 fixed right-6 bottom-6 hover:bg-opacity-50  active:bg-gray-500'
         aria-label='Theme Toggler'
