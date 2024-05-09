@@ -39,6 +39,7 @@ export default function Home() {
         <tbody>
           {products.map((product) => (
             <ProductRow
+              key={product.id}
               id={product.id}
               title={product.title}
               price={product.price}
