@@ -1,39 +1,49 @@
+import clsx from 'clsx';
 import React from 'react';
 
 interface ProductRowProps {
   id: number;
   title: string;
   price: number;
-  discountPercentage: number;
+  discount: number;
   rating: number;
   stock: number;
   brand: string;
   category: string;
   thumbnail: string;
+  className?: string;
 }
 
 export const ProductRow = ({
   id,
   title,
   price,
-  discountPercentage,
+  discount,
   rating,
   stock,
   brand,
   category,
   thumbnail,
+  className,
 }: ProductRowProps) => {
   return (
-    <tr>
-      <td>{id}</td>
-      <td>{title}</td>
-      <td>{price}</td>
-      <td>{discountPercentage}</td>
-      <td>{rating}</td>
-      <td>{stock}</td>
-      <td>{brand}</td>
-      <td>{category}</td>
-      <td>{thumbnail}</td>
+    <tr className=' [&:nth-child(3n)]:bg-amber-200'>
+      <td className={clsx(className)}>{id}</td>
+      <td className={clsx(className)}>{title}</td>
+      <td className={clsx(className)}>
+        {Math.round((price * (100 - discount)) / 100)}
+      </td>
+      <td className={clsx(className)}>{discount}%</td>
+      <td className={clsx(className)}>{price}</td>
+      <td className={clsx(className)}>{rating}</td>
+      <td className={clsx(className)}>{stock}</td>
+      <td className={clsx(className)}>{brand}</td>
+      <td className={clsx(className)}>{category}</td>
+      <td className={clsx(className)}>
+        <a href={thumbnail} target='_blank'>
+          <img src={thumbnail} width='50' />
+        </a>
+      </td>
     </tr>
   );
 };

@@ -1,24 +1,27 @@
-import data from './data.json';
+'use client';
 
 import { ProductRow } from './components/ProductRow';
+
+import data from './data.json';
 
 export default function Home() {
   const products = data.products;
 
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      <table className='table-fixed'>
+    <main className='p-5 bg-white'>
+      <table className='table-auto text-left'>
         <thead>
           <tr>
             <th>ID</th>
             <th>Title</th>
-            <th>Price</th>
-            <th>discountPercentage</th>
-            <th>rating</th>
-            <th>stock</th>
-            <th>brand</th>
-            <th>category</th>
-            <th>thumbnail</th>
+            <th className='pr-3'>Price</th>
+            <th className='pr-3'>Discount</th>
+            <th className='pr-3'>Original Price</th>
+            <th className='pr-3'>Rating</th>
+            <th className='pr-3'>Stock</th>
+            <th>Brand</th>
+            <th>Category</th>
+            <th>Thumbnail</th>
           </tr>
         </thead>
         <tbody>
@@ -27,12 +30,13 @@ export default function Home() {
               id={product.id}
               title={product.title}
               price={product.price}
-              discountPercentage={product.discountPercentage}
+              discount={product.discountPercentage}
               rating={product.rating}
               stock={product.stock}
               brand={product.brand}
               category={product.category}
               thumbnail={product.thumbnail}
+              className={'py-3 pr-2'}
             />
           ))}
         </tbody>
