@@ -8,7 +8,7 @@ export default function Home() {
   const products = data.products;
 
   return (
-    <main className='p-5'>
+    <main className='p-5 flex md:justify-center'>
       <table className='text-left'>
         <thead>
           <tr>
