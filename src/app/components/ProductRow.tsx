@@ -27,7 +27,7 @@ export const ProductRow = ({
   className,
 }: ProductRowProps) => {
   return (
-    <tr className=' even:bg-amber-200'>
+    <tr className=' even:bg-amber-200 dark:even:bg-amber-600'>
       <td className={clsx(className)}>{id}</td>
       <td className={clsx(className)}>{title}</td>
       <td className={clsx(className)}>
