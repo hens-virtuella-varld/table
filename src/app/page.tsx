@@ -23,7 +23,7 @@ export default function Home() {
       </button>
       <table className='text-left'>
         <thead>
-          <tr className='sticky top-0 bg-green-200 dark:bg-emerald-800'>
+          <tr className='sticky top-0 bg-green-200 dark:bg-emerald-800 shadow-xl'>
             <th className='py-3'>Title</th>
             <th className='pr-4'>Price</th>
             <th className='pr-4'>Discount</th>
