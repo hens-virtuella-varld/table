@@ -24,7 +24,6 @@ export default function Home() {
       <table className='text-left'>
         <thead>
           <tr>
-            <th className='pr-3'>ID</th>
             <th>Title</th>
             <th className='pr-3'>Price</th>
             <th className='pr-3'>Discount</th>
@@ -40,7 +39,6 @@ export default function Home() {
           {products.map((product) => (
             <ProductRow
               key={product.id}
-              id={product.id}
               title={product.title}
               price={product.price}
               discount={product.discountPercentage}

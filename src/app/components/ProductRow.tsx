@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import React from 'react';
 
 interface ProductRowProps {
-  id: number;
   title: string;
   price: number;
   discount: number;
@@ -15,7 +14,6 @@ interface ProductRowProps {
 }
 
 export const ProductRow = ({
-  id,
   title,
   price,
   discount,
@@ -28,7 +26,6 @@ export const ProductRow = ({
 }: ProductRowProps) => {
   return (
     <tr className=' even:bg-amber-200 dark:even:bg-yellow-800'>
-      <td className={clsx(className)}>{id}</td>
       <td className={clsx(className)}>{title}</td>
       <td className={clsx(className)}>
         {Math.round((price * (100 - discount)) / 100)}
