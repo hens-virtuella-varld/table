@@ -34,11 +34,11 @@ export const ProductRow = ({
       <td>{category}</td>
 
       <td>
-        <a className='lg:hidden p-2' href={thumbnail} target='_blank'>
+        <a className='lg:hidden' href={thumbnail} target='_blank'>
           Link
         </a>
         <a
-          className='max-lg:hidden flex justify-end'
+          className='max-lg:hidden'
           href={thumbnail}
           target='_blank'
         >

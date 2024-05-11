@@ -19,12 +19,6 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: transparent;
-  /* linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
 }
 
 @layer utilities {
@@ -56,5 +50,8 @@ body {
   }
   td:first-child {
     @apply pl-3;
+  }
+  td:last-child {
+    @apply px-2 py-1;
   }
 }
