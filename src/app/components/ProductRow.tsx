@@ -23,7 +23,7 @@ export const ProductRow = ({
   thumbnail,
 }: ProductRowProps) => {
   return (
-    <tr className=' even:bg-amber-200 dark:even:bg-yellow-800'>
+    <tr className='tbody-tr'>
       <td>{title}</td>
       <td>{Math.round((price * (100 - discount)) / 100)}</td>
       <td>{discount}%</td>
@@ -37,11 +37,7 @@ export const ProductRow = ({
         <a className='lg:hidden' href={thumbnail} target='_blank'>
           Link
         </a>
-        <a
-          className='max-lg:hidden'
-          href={thumbnail}
-          target='_blank'
-        >
+        <a className='max-lg:hidden' href={thumbnail} target='_blank'>
           <img src={thumbnail} width='50' />
         </a>
       </td>

@@ -35,6 +35,10 @@ body {
 }
 
 @layer components {
+  main {
+    @apply p-5 flex md:justify-center font-mono text-slate-700 dark:text-slate-300;
+  }
+
   th {
     @apply px-2 py-3;
   }
@@ -46,12 +50,28 @@ body {
   }
 
   td {
-    @apply p-2;
+    @apply p-2 border-b-2 border-solid border-gray-400;
   }
   td:first-child {
-    @apply pl-3;
+    @apply pl-3 sticky left-0 bg-white dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800;
   }
   td:last-child {
     @apply px-2 py-1;
   }
+}
+
+.theme-toggler {
+  @apply bg-gray-400 bg-opacity-30 fixed right-6 bottom-6 hover:bg-opacity-50  active:bg-gray-500;
+}
+
+.thead-tr {
+  @apply uppercase sticky z-10 top-0 bg-amber-200 dark:bg-rose-950 shadow-lg dark:shadow-rose-950/50;
+}
+
+.thead-tr th {
+  @apply sticky z-20 left-0 bg-amber-200 dark:bg-rose-950;
+}
+
+.tbody-tr {
+  @apply text-center hover:bg-gray-200 dark:hover:bg-gray-800;
 }

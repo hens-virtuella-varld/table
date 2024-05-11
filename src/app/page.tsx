@@ -13,19 +13,19 @@ export default function Home() {
   const products = data.products;
 
   return (
-    <main className='p-5 flex md:justify-center font-mono text-slate-700 dark:text-slate-300'>
+    <main>
       <button
-        className='bg-gray-400 bg-opacity-30 fixed right-6 bottom-6 hover:bg-opacity-50  active:bg-gray-500'
+        className='theme-toggler'
         aria-label='Theme Toggler'
         onClick={() => (theme == 'dark' ? setTheme('light') : setTheme('dark'))}
       >
         {<ThemeTogglerIcon className={'w-10 h-10'} />}
       </button>
-      <table className='text-left'>
+      <table>
         <thead>
-          <tr className='uppercase sticky top-0 bg-green-200 dark:bg-emerald-800 shadow-xl dark:shadow-emerald-800/50'>
-            <th className='sticky left-0 bg-green-200 dark:bg-emerald-800'>
-              Title
+          <tr className='thead-tr'>
+            <th>
+              Product
             </th>
             <th>Price</th>
             <th>Discount</th>
