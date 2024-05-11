@@ -23,8 +23,10 @@ export const ProductRow = ({
   thumbnail,
 }: ProductRowProps) => {
   return (
-    <tr className='tbody-tr'>
-      <td>{title}</td>
+    <tr>
+      <td>
+        {title}
+      </td>
       <td>{Math.round((price * (100 - discount)) / 100)}</td>
       <td>{discount}%</td>
       <td>{price}</td>

@@ -23,8 +23,8 @@ export default function Home() {
       </button>
       <table>
         <thead>
-          <tr className='thead-tr'>
-            <th>
+          <tr>
+            <th className='sticky z-20 left-0 bg-amber-200 dark:bg-rose-950 shadow-lg-r'>
               Product
             </th>
             <th>Price</th>
