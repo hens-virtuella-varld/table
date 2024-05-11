@@ -30,18 +30,22 @@ export const ProductRow = ({
       <td className={clsx(className)}>
         {Math.round((price * (100 - discount)) / 100)}
       </td>
-      <td className={clsx(className)}>{discount}%</td>
-      <td className={clsx(className)}>{price}</td>
-      <td className={clsx(className)}>{rating}</td>
-      <td className={clsx(className)}>{stock}</td>
-      <td className={clsx(className)}>{brand}</td>
-      <td className={clsx(className)}>{category}</td>
+      <td className={className}>{discount}%</td>
+      <td className={className}>{price}</td>
+      <td className={className}>{rating}</td>
+      <td className={className}>{stock}</td>
+      <td className={className}>{brand}</td>
+      <td className={className}>{category}</td>
 
-      <td className={clsx(className)}>
-        <a className='lg:hidden' href={thumbnail} target='_blank'>
+      <td>
+        <a className='lg:hidden p-2' href={thumbnail} target='_blank'>
           Link
         </a>
-        <a className='max-lg:hidden' href={thumbnail} target='_blank'>
+        <a
+          className='max-lg:hidden flex justify-end'
+          href={thumbnail}
+          target='_blank'
+        >
           <img src={thumbnail} width='50' />
         </a>
       </td>

@@ -23,16 +23,18 @@ export default function Home() {
       </button>
       <table className='text-left'>
         <thead>
-          <tr className='sticky top-0 bg-green-200 dark:bg-emerald-800 shadow-xl'>
-            <th className='py-3'>Title</th>
-            <th className='pr-4'>Price</th>
-            <th className='pr-4'>Discount</th>
-            <th className='pr-4'>Original Price</th>
-            <th className='pr-4'>Rating</th>
-            <th className='pr-4'>Stock</th>
-            <th>Brand</th>
-            <th>Category</th>
-            <th>Image</th>
+          <tr className='uppercase sticky top-0 bg-green-200 dark:bg-emerald-800 shadow-xl dark:shadow-emerald-800/50'>
+            <th className='p-3 sticky left-0 bg-green-200 dark:bg-emerald-800'>
+              Title
+            </th>
+            <th className='p-2'>Price</th>
+            <th className='p-2'>Discount</th>
+            <th className='p-2'>Original Price</th>
+            <th className='p-2'>Rating</th>
+            <th className='p-2'>Stock</th>
+            <th className='p-2'>Brand</th>
+            <th className='p-2'>Category</th>
+            <th className='p-2'>Image</th>
           </tr>
         </thead>
         <tbody>
@@ -47,7 +49,7 @@ export default function Home() {
               brand={product.brand}
               category={product.category}
               thumbnail={product.thumbnail}
-              className={'py-2 pr-2'}
+              className={'p-2'}
             />
           ))}
         </tbody>
