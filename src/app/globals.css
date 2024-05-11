@@ -39,3 +39,22 @@ body {
         bg-white;
   }
 }
+
+@layer components {
+  th {
+    @apply px-2 py-3;
+  }
+  th:first-child {
+    @apply pl-3;
+  }
+  th:last-child {
+    @apply pr-3;
+  }
+
+  td {
+    @apply p-2;
+  }
+  td:first-child {
+    @apply pl-3;
+  }
+}

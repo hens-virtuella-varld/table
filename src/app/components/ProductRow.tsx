@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import React from 'react';
 
 interface ProductRowProps {
@@ -22,20 +21,17 @@ export const ProductRow = ({
   brand,
   category,
   thumbnail,
-  className,
 }: ProductRowProps) => {
   return (
     <tr className=' even:bg-amber-200 dark:even:bg-yellow-800'>
-      <td className={clsx(className)}>{title}</td>
-      <td className={clsx(className)}>
-        {Math.round((price * (100 - discount)) / 100)}
-      </td>
-      <td className={className}>{discount}%</td>
-      <td className={className}>{price}</td>
-      <td className={className}>{rating}</td>
-      <td className={className}>{stock}</td>
-      <td className={className}>{brand}</td>
-      <td className={className}>{category}</td>
+      <td>{title}</td>
+      <td>{Math.round((price * (100 - discount)) / 100)}</td>
+      <td>{discount}%</td>
+      <td>{price}</td>
+      <td>{rating}</td>
+      <td>{stock}</td>
+      <td>{brand}</td>
+      <td>{category}</td>
 
       <td>
         <a className='lg:hidden p-2' href={thumbnail} target='_blank'>
