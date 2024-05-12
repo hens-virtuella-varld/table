@@ -36,45 +36,47 @@ body {
 
 @layer components {
   main {
-    @apply p-5 flex md:justify-center font-mono text-slate-700 dark:text-slate-300;
+    @apply p-5 block md:justify-center font-mono text-slate-700 dark:text-slate-300;
   }
 
   h2 {
     @apply text-2xl py-3 lg:text-center;
   }
 
-  .table {
-    thead tr {
-      @apply uppercase sticky z-10 top-0 bg-amber-200 dark:bg-rose-950 shadow-lg dark:shadow-rose-950/50;
-    }
+  .t-table > div {
+    @apply flex justify-center;
+  }
 
-    th {
-      @apply px-2 py-3;
-    }
-    th:first-child {
-      @apply pl-3;
-    }
-    th:last-child {
-      @apply pr-3;
-    }
+  thead tr {
+    @apply uppercase sticky z-10 top-0 bg-amber-200 dark:bg-rose-950 shadow-lg dark:shadow-rose-950/50;
+  }
 
-    tr {
-      @apply text-center;
-    }
+  th {
+    @apply px-2 py-3;
+  }
+  th:first-child {
+    @apply pl-3;
+  }
+  th:last-child {
+    @apply pr-3;
+  }
 
-    tbody tr {
-      @apply hover:bg-gray-200 dark:hover:bg-gray-800;
-    }
+  tr {
+    @apply text-center;
+  }
 
-    td {
-      @apply p-2 border-b-2 border-solid border-gray-400;
-    }
-    td:first-child {
-      @apply pl-3 sticky left-0 bg-white dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800;
-    }
-    td:last-child {
-      @apply px-2 py-1;
-    }
+  tbody tr {
+    @apply hover:bg-gray-200 dark:hover:bg-gray-800;
+  }
+
+  td {
+    @apply p-2 border-b-2 border-solid border-gray-400;
+  }
+  td:first-child {
+    @apply pl-3 sticky left-0 bg-white dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800;
+  }
+  td:last-child {
+    @apply px-2 py-1;
   }
 }
 
@@ -83,7 +85,12 @@ body {
 }
 
 .table-switcher {
-  @apply bg-amber-200 dark:bg-rose-900 hover:bg-amber-300 dark:hover:bg-rose-950 font-bold py-2 px-4 rounded shadow-md dark:shadow-rose-900/50 dark:hover:shadow-rose-950/50;
+  @apply pb-4 flex lg:justify-center 
+}
+
+.table-switcher > button {
+  @apply py-2 px-4 
+  bg-amber-200 dark:bg-rose-900 hover:bg-amber-300 dark:hover:bg-rose-950 font-bold  rounded shadow-md dark:shadow-rose-900/50 dark:hover:shadow-rose-950/50;
 }
 
 /* table with grid & div */

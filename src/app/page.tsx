@@ -16,7 +16,7 @@ export default function Home() {
   const products = data.products;
 
   return (
-    <main className='flex flex-col'>
+    <main>
       <button
         className='theme-toggler'
         aria-label='Theme Toggler'
@@ -25,8 +25,8 @@ export default function Home() {
         {<ThemeTogglerIcon className={'w-10 h-10'} />}
       </button>
 
-      <div className='pb-4'>
-        <button onClick={() => setDivGrid(!divGrid)} className='table-switcher'>
+      <div className='table-switcher'>
+        <button onClick={() => setDivGrid(!divGrid)}>
           Switch to
           {divGrid ? ' <table> element ' : ' <div> element & grid '}
           table
@@ -34,40 +34,42 @@ export default function Home() {
       </div>
 
       {!divGrid && (
-        <section className='table'>
+        <section className='t-table'>
           <h2>{'Table made with <table> element'}</h2>
-          <table>
-            <thead>
-              <tr>
-                <th className='sticky z-20 left-0 bg-amber-200 dark:bg-rose-950 shadow-lg-r'>
-                  Product
-                </th>
-                <th>Price</th>
-                <th>Discount</th>
-                <th>Original Price</th>
-                <th>Rating</th>
-                <th>Stock</th>
-                <th>Brand</th>
-                <th>Category</th>
-                <th>Image</th>
-              </tr>
-            </thead>
-            <tbody>
-              {products.map((product) => (
-                <ProductRow
-                  key={product.id}
-                  title={product.title}
-                  price={product.price}
-                  discount={product.discountPercentage}
-                  rating={product.rating}
-                  stock={product.stock}
-                  brand={product.brand}
-                  category={product.category}
-                  thumbnail={product.thumbnail}
-                />
-              ))}
-            </tbody>
-          </table>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th className='sticky z-20 left-0 bg-amber-200 dark:bg-rose-950 shadow-lg-r'>
+                    Product
+                  </th>
+                  <th>Price</th>
+                  <th>Discount</th>
+                  <th>Original Price</th>
+                  <th>Rating</th>
+                  <th>Stock</th>
+                  <th>Brand</th>
+                  <th>Category</th>
+                  <th>Image</th>
+                </tr>
+              </thead>
+              <tbody>
+                {products.map((product) => (
+                  <ProductRow
+                    key={product.id}
+                    title={product.title}
+                    price={product.price}
+                    discount={product.discountPercentage}
+                    rating={product.rating}
+                    stock={product.stock}
+                    brand={product.brand}
+                    category={product.category}
+                    thumbnail={product.thumbnail}
+                  />
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
       )}
 
