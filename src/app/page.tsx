@@ -58,11 +58,14 @@ export default function Home() {
           </tbody>
         </table>
       </section> */}
-      <section className='w-[70rem]'>
+
+      <section className='min-w-[70rem]'>
         <h2 className='text-center'>Table made with div element and grid</h2>
         <div>
-          <div className='grid grid-cols-12 gap-2'>
-            <div className='col-span-2'>Product</div>
+          <div className='grid grid-cols-12 gap-2 items-center px-2 py-3 text-center font-bold uppercase sticky z-10 top-0 bg-amber-200 dark:bg-rose-950 shadow-lg dark:shadow-rose-950/50'>
+            <div className='col-span-2 sticky z-20 left-0 bg-amber-200 dark:bg-rose-950'>
+              Product
+            </div>
             <div>Price</div>
             <div>Discount</div>
             <div>Original Price</div>
@@ -70,7 +73,7 @@ export default function Home() {
             <div>Stock</div>
             <div className='col-span-2'>Brand</div>
             <div className='col-span-2'>Category</div>
-            <div>Image</div>
+            <div className='text-left'>Image</div>
           </div>
           <div>
             {products.map((product) => (
