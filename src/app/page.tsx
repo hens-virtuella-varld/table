@@ -23,7 +23,7 @@ export default function Home() {
         {<ThemeTogglerIcon className={'w-10 h-10'} />}
       </button>
 
-      <section>
+      {/* <section>
         <h2 className='text-center'>Table made with table element</h2>
         <table>
           <thead>
@@ -57,19 +57,19 @@ export default function Home() {
             ))}
           </tbody>
         </table>
-      </section>
-      <section>
-        <h2 className='text-center'>Table made with div element and flex</h2>
+      </section> */}
+      <section className='w-[70rem]'>
+        <h2 className='text-center'>Table made with div element and grid</h2>
         <div>
-          <div className='header-row flex'>
-            <div>Product</div>
+          <div className='grid grid-cols-12 gap-2'>
+            <div className='col-span-2'>Product</div>
             <div>Price</div>
             <div>Discount</div>
             <div>Original Price</div>
             <div>Rating</div>
             <div>Stock</div>
-            <div>Brand</div>
-            <div>Category</div>
+            <div className='col-span-2'>Brand</div>
+            <div className='col-span-2'>Category</div>
             <div>Image</div>
           </div>
           <div>

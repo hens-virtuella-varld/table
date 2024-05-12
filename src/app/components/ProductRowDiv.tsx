@@ -12,15 +12,15 @@ export const ProductRowDiv = ({
   thumbnail,
 }: ProductRowProps) => {
   return (
-    <div className='flex'>
-      <div>{title}</div>
+    <div className=' grid grid-cols-12 gap-2'>
+      <div className='col-span-2'>{title}</div>
       <div>{Math.round((price * (100 - discount)) / 100)}</div>
       <div>{discount}%</div>
       <div>{price}</div>
       <div>{rating}</div>
       <div>{stock}</div>
-      <div>{brand}</div>
-      <div>{category}</div>
+      <div className='col-span-2'>{brand}</div>
+      <div className='col-span-2'>{category}</div>
 
       <div>
         <a className='lg:hidden' href={thumbnail} target='_blank'>
