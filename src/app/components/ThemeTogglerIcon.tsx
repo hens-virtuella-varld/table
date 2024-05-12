@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import React from 'react';
 
 interface ThemeTogglerIconProps {
@@ -17,7 +16,7 @@ export const ThemeTogglerIcon = ({ className }: ThemeTogglerIconProps) => {
       id='Icons'
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 32 32'
-      className={clsx(className, 'z-10')}
+      className={className}
     >
       <g>
         <path d='M13,7c-0.6,0-1-0.4-1-1V5c0-0.6,0.4-1,1-1s1,0.4,1,1v1C14,6.6,13.6,7,13,7z' />
