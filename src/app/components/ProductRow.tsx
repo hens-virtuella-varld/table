@@ -1,16 +1,5 @@
 import React from 'react';
-
-interface ProductRowProps {
-  title: string;
-  price: number;
-  discount: number;
-  rating: number;
-  stock: number;
-  brand: string;
-  category: string;
-  thumbnail: string;
-  className?: string;
-}
+import { ProductRowProps } from '../types';
 
 export const ProductRow = ({
   title,
