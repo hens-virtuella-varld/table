@@ -39,40 +39,68 @@ body {
     @apply p-5 flex md:justify-center font-mono text-slate-700 dark:text-slate-300;
   }
 
-  thead tr {
-    @apply uppercase sticky z-10 top-0 bg-amber-200 dark:bg-rose-950 shadow-lg dark:shadow-rose-950/50;
+  h2 {
+    @apply text-2xl py-3 lg:text-center;
   }
 
+  .table {
+    thead tr {
+      @apply uppercase sticky z-10 top-0 bg-amber-200 dark:bg-rose-950 shadow-lg dark:shadow-rose-950/50;
+    }
 
-  th {
-    @apply px-2 py-3;
-  }
-  th:first-child {
-    @apply pl-3;
-  }
-  th:last-child {
-    @apply pr-3;
-  }
+    th {
+      @apply px-2 py-3;
+    }
+    th:first-child {
+      @apply pl-3;
+    }
+    th:last-child {
+      @apply pr-3;
+    }
 
-  tr {
-    @apply text-center;
-  }
+    tr {
+      @apply text-center;
+    }
 
-  tbody tr {
-    @apply hover:bg-gray-200 dark:hover:bg-gray-800;
-  }
+    tbody tr {
+      @apply hover:bg-gray-200 dark:hover:bg-gray-800;
+    }
 
-  td {
-    @apply p-2 border-b-2 border-solid border-gray-400;
-  }
-  td:first-child {
-    @apply pl-3 sticky left-0 bg-white dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800;
-  }
-  td:last-child {
-    @apply px-2 py-1;
+    td {
+      @apply p-2 border-b-2 border-solid border-gray-400;
+    }
+    td:first-child {
+      @apply pl-3 sticky left-0 bg-white dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800;
+    }
+    td:last-child {
+      @apply px-2 py-1;
+    }
   }
 }
 
 .theme-toggler {
   @apply bg-gray-400 bg-opacity-30 fixed right-6 bottom-6 hover:bg-opacity-50  active:bg-gray-500;
+}
+
+.table-switcher {
+  @apply bg-amber-200 dark:bg-rose-900 hover:bg-amber-300 dark:hover:bg-rose-950 font-bold py-2 px-4 rounded;
+}
+
+/* table with grid & div */
+.grid-div {
+  @apply min-w-[70rem];
+}
+.header {
+  @apply grid grid-cols-12 gap-2 items-center px-2 py-3 text-center font-bold uppercase sticky z-10 top-0 bg-amber-200 dark:bg-rose-950 shadow-lg dark:shadow-rose-950/50;
+}
+.product-header {
+  @apply col-span-2 sticky z-20 left-0 bg-amber-200 dark:bg-rose-950;
+}
+
+.body {
+  @apply grid grid-cols-12 gap-2 items-center text-center p-2  border-b-2 border-solid border-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800;
+}
+
+.title-col {
+  @apply col-span-2 sticky left-0 z-10 bg-white dark:bg-gray-900;
 }

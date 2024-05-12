@@ -26,10 +26,7 @@ export default function Home() {
       </button>
 
       <div className='pb-4'>
-        <button
-          onClick={() => setDivGrid(!divGrid)}
-          className='bg-amber-200 dark:bg-rose-900 hover:bg-amber-300 dark:hover:bg-rose-950 font-bold py-2 px-4 rounded'
-        >
+        <button onClick={() => setDivGrid(!divGrid)} className='table-switcher'>
           Switch to
           {divGrid ? ' <table> element ' : ' <div> element & grid '}
           table
@@ -37,10 +34,8 @@ export default function Home() {
       </div>
 
       {!divGrid && (
-        <section>
-          <h2 className='text-2xl py-3 text-center '>
-            {'Table made with <table> element'}
-          </h2>
+        <section className='table'>
+          <h2>{'Table made with <table> element'}</h2>
           <table>
             <thead>
               <tr>
@@ -77,39 +72,33 @@ export default function Home() {
       )}
 
       {divGrid && (
-        <section className='min-w-[70rem]'>
-          <h2 className='text-2xl py-3  md:text-center'>
-            {'Table made with <div> element & grid'}
-          </h2>
+        <section className='grid-div'>
+          <h2>{'Table made with <div> element & grid'}</h2>
+          <div className='header'>
+            <div className='product-header'>Product</div>
+            <div>Price</div>
+            <div>Discount</div>
+            <div>Original Price</div>
+            <div>Rating</div>
+            <div>Stock</div>
+            <div className='col-span-2'>Brand</div>
+            <div className='col-span-2'>Category</div>
+            <div className='text-left'>Image</div>
+          </div>
           <div>
-            <div className='grid grid-cols-12 gap-2 items-center px-2 py-3 text-center font-bold uppercase sticky z-10 top-0 bg-amber-200 dark:bg-rose-950 shadow-lg dark:shadow-rose-950/50'>
-              <div className='col-span-2 sticky z-20 left-0 bg-amber-200 dark:bg-rose-950'>
-                Product
-              </div>
-              <div>Price</div>
-              <div>Discount</div>
-              <div>Original Price</div>
-              <div>Rating</div>
-              <div>Stock</div>
-              <div className='col-span-2'>Brand</div>
-              <div className='col-span-2'>Category</div>
-              <div className='text-left'>Image</div>
-            </div>
-            <div>
-              {products.map((product) => (
-                <ProductRowDiv
-                  key={product.id}
-                  title={product.title}
-                  price={product.price}
-                  discount={product.discountPercentage}
-                  rating={product.rating}
-                  stock={product.stock}
-                  brand={product.brand}
-                  category={product.category}
-                  thumbnail={product.thumbnail}
-                />
-              ))}
-            </div>
+            {products.map((product) => (
+              <ProductRowDiv
+                key={product.id}
+                title={product.title}
+                price={product.price}
+                discount={product.discountPercentage}
+                rating={product.rating}
+                stock={product.stock}
+                brand={product.brand}
+                category={product.category}
+                thumbnail={product.thumbnail}
+              />
+            ))}
           </div>
         </section>
       )}

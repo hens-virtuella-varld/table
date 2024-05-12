@@ -12,8 +12,8 @@ export const ProductRowDiv = ({
   thumbnail,
 }: ProductRowProps) => {
   return (
-    <div className=' grid grid-cols-12 gap-2 items-center text-center p-2  border-b-2 border-solid border-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800'>
-      <div className='col-span-2 sticky left-0 z-10 bg-white dark:bg-gray-900'>
+    <div className='body'>
+      <div className='title-col'>
         {title}
       </div>
       <div>{Math.round((price * (100 - discount)) / 100)}</div>
