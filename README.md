@@ -53,3 +53,20 @@ However, with this method in dark mode, it seems like I couldn't render DOM body
 You can check what I did in the commit `ffaded4`. The image below is how my failed dark mode looks like:
 
 ![Failed dark mode](https://github.com/hens-virtuella-varld/table/assets/47247794/c21a08b4-29ed-4281-9112-11757e213c5f)
+
+### Table with: `<table>` element v.s `<div>` element & grid
+
+After I finished my table with `<table>` element. I decided to make one more table with `<div>` element. 
+
+#### Misunderstanding to the assignment description?!
+> You can use `<table>` or `<div>` with flex
+
+In the description of assignment, it's written that people can use `<table>` or `<div>` with flex to make a table. I guess the reason to use `<div>` with flex to make a table is that you can switch a row to a card with flex in small screens. 
+
+However, when I was going to make a new table with `<div>`, it made more sense to me to make a table with grid. Grid table displays data clearly even when there is much content in a cell. That's something not easy to handle in a flex table. So I used `div` and grid to make my second table.
+
+#### Differences to style `<table>` element v.s `<div>` element & grid
+##### Table width
+Compared to a table with `<div>` element & grid, a table with `<table>` element adjusts its width automatically when the screen sizes change. I set a min-width for the div grid table so its layout looks fine in small screens.
+##### Product column' shadow effect
+I wanted to have shadow effect on the header row and product column for both tables. I managed to do it in the table with `<div>` element & grid. But in the table with `table` element, I only managed to create shadow on the header row.
