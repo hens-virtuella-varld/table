@@ -75,7 +75,7 @@ body {
 }
 
 .theme-toggler {
-  @apply bg-gray-400 bg-opacity-30 fixed right-6 bottom-6 hover:bg-opacity-50  active:bg-gray-500;
+  @apply bg-gray-400 z-40 bg-opacity-30 fixed right-6 bottom-6 hover:bg-opacity-50  active:bg-gray-500;
 }
 
 .table-switcher {
