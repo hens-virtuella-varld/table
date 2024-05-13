@@ -40,9 +40,7 @@ export default function Home() {
             <table>
               <thead>
                 <tr>
-                  <th >
-                    Product
-                  </th>
+                  <th>Product</th>
                   <th>Price</th>
                   <th>Discount</th>
                   <th>Original Price</th>
@@ -77,15 +75,15 @@ export default function Home() {
         <section className='grid-div'>
           <h2>{'Table made with <div> element & grid'}</h2>
           <div className='header z-10'>
-            <div className='product-header'>Product</div>
-            <div>Price</div>
-            <div>Discount</div>
-            <div>Original Price</div>
-            <div>Rating</div>
-            <div>Stock</div>
-            <div className='col-span-2'>Brand</div>
-            <div className='col-span-2'>Category</div>
-            <div className='text-left'>Image</div>
+            <div className='product-header header-col'>Product</div>
+            <div className='header-col'>Price</div>
+            <div className='header-col'>Discount</div>
+            <div className='header-col'>Original Price</div>
+            <div className='header-col'>Rating</div>
+            <div className='header-col'>Stock</div>
+            <div className='header-col col-span-2'>Brand</div>
+            <div className='header-col col-span-2'>Category</div>
+            <div className='header-col text-left'>Image</div>
           </div>
           <div className='relative'>
             {products.map((product) => (
