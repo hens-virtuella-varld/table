@@ -76,7 +76,7 @@ export default function Home() {
       {divGrid && (
         <section className='grid-div'>
           <h2>{'Table made with <div> element & grid'}</h2>
-          <div className='header'>
+          <div className='header z-10'>
             <div className='product-header'>Product</div>
             <div>Price</div>
             <div>Discount</div>
@@ -87,7 +87,7 @@ export default function Home() {
             <div className='col-span-2'>Category</div>
             <div className='text-left'>Image</div>
           </div>
-          <div>
+          <div className='relative'>
             {products.map((product) => (
               <ProductRowDiv
                 key={product.id}

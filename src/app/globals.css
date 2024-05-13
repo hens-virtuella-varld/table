@@ -85,7 +85,7 @@ body {
 }
 
 .table-switcher {
-  @apply pb-4 flex lg:justify-center 
+  @apply pb-4 flex lg:justify-center;
 }
 
 .table-switcher > button {
@@ -98,16 +98,16 @@ body {
   @apply min-w-[70rem];
 }
 .header {
-  @apply grid grid-cols-12 gap-2 items-center px-2 py-3 text-center font-bold uppercase sticky z-10 top-0 bg-amber-200 dark:bg-rose-950 shadow-lg dark:shadow-rose-950/50;
+  @apply grid grid-cols-12 gap-2 items-center px-2 py-3 text-center font-bold uppercase sticky top-0 bg-amber-200 dark:bg-rose-950 shadow-lg dark:shadow-rose-950/50;
 }
 .product-header {
-  @apply col-span-2 sticky z-20 left-0 bg-amber-200 dark:bg-rose-950;
+  @apply col-span-2 sticky left-0 h-full flex justify-center items-center bg-amber-200 dark:bg-rose-950;
 }
 
-.body {
+.div-row {
   @apply grid grid-cols-12 gap-2 items-center text-center p-2  border-b-2 border-solid border-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800;
 }
 
 .title-col {
-  @apply col-span-2 sticky left-0 z-10 bg-white dark:bg-gray-900;
+  @apply col-span-2 sticky left-0 bg-white dark:bg-gray-900;
 }
