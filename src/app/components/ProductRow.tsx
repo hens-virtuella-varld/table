@@ -12,7 +12,7 @@ export const ProductRow = ({
   thumbnail,
 }: ProductRowProps) => {
   return (
-    <tr className='hover:bg-gray-200 dark:hover:bg-gray-800 group'>
+    <tr className='hover:bg-gray-200 dark:hover:bg-gray-800 group text-center'>
       <td className='pl-3 sticky left-0 bg-white dark:bg-gray-900 group-hover:bg-gray-200 group-hover:dark:bg-gray-800'>
         {title}
       </td>
@@ -24,7 +24,7 @@ export const ProductRow = ({
       <td>{brand}</td>
       <td>{category}</td>
 
-      <td>
+      <td className='px-2 py-1'>
         <a className='lg:hidden' href={thumbnail} target='_blank'>
           Link
         </a>

@@ -2,23 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: transparent;
+   @apply dark:bg-gray-900
+        bg-white;
 }
 
 @layer utilities {
@@ -28,83 +14,17 @@ body {
 }
 
 @layer base {
-  body {
-    @apply dark:bg-gray-900
-        bg-white;
-  }
-}
-
-@layer components {
-  main {
-    @apply p-5 block md:justify-center font-mono text-slate-700 dark:text-slate-300;
-  }
-
-  h2 {
-    @apply text-2xl py-3 lg:text-center;
-  }
-
-  .t-table > div {
-    @apply flex justify-center;
-  }
-
-  thead tr {
-    @apply uppercase sticky z-10 top-0 bg-amber-200 dark:bg-rose-950 shadow-lg dark:shadow-rose-950/50;
-  }
-
   th {
     @apply px-2 py-3;
-  }
-  th:first-child {
-    @apply pl-3 sticky z-20 left-0 bg-amber-200 dark:bg-rose-950;
-  }
-  th:last-child {
-    @apply pr-3;
-  }
-
-  tr {
-    @apply text-center;
   }
 
   td {
     @apply p-2 border-b-2 border-solid border-gray-400;
   }
+}
 
-  td:last-child {
-    @apply px-2 py-1;
+@layer components {
+  .div-header-col {
+    @apply px-2 py-3;
   }
-}
-
-.theme-toggler {
-  @apply bg-gray-400 z-40 bg-opacity-30 fixed right-6 bottom-6 hover:bg-opacity-50  active:bg-gray-500;
-}
-
-.table-switcher {
-  @apply pb-4 flex lg:justify-center;
-}
-
-.table-switcher > button {
-  @apply py-2 px-4 
-  bg-amber-200 dark:bg-rose-900 hover:bg-amber-300 dark:hover:bg-rose-950 font-bold  rounded shadow-md dark:shadow-rose-900/50 dark:hover:shadow-rose-950/50;
-}
-
-/* table with grid & div */
-.grid-div {
-  @apply min-w-[70rem];
-}
-.header {
-  @apply grid grid-cols-12 gap-2 items-center h-full text-center font-bold uppercase sticky top-0 bg-amber-200 dark:bg-rose-950 shadow-lg dark:shadow-rose-950/50;
-}
-.header-col {
-  @apply px-2 py-3;
-}
-.product-header {
-  @apply col-span-2 sticky left-0 h-full flex justify-center items-center bg-amber-200 dark:bg-rose-950 shadow-lg-r dark:shadow-red-900/50;
-}
-
-.div-row {
-  @apply grid grid-cols-12 gap-2 items-center text-center border-b-2 border-solid border-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800;
-}
-
-.title-col {
-  @apply col-span-2 sticky left-0  p-2  bg-white dark:bg-gray-900;
 }
