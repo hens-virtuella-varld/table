@@ -97,9 +97,8 @@ body {
 .header-col {
   @apply px-2 py-3;
 }
-
 .product-header {
-  @apply col-span-2 sticky left-0 h-full flex justify-center items-center bg-amber-200 dark:bg-rose-950 shadow-lg-r dark:shadow-gray-700/50;
+  @apply col-span-2 sticky left-0 h-full flex justify-center items-center bg-amber-200 dark:bg-rose-950 shadow-lg-r dark:shadow-red-900/50;
 }
 
 .div-row {
