@@ -55,7 +55,7 @@ body {
     @apply px-2 py-3;
   }
   th:first-child {
-    @apply pl-3;
+    @apply pl-3 sticky z-20 left-0 bg-amber-200 dark:bg-rose-950 ;
   }
   th:last-child {
     @apply pr-3;
@@ -65,16 +65,10 @@ body {
     @apply text-center;
   }
 
-  tbody tr {
-    @apply hover:bg-gray-200 dark:hover:bg-gray-800;
-  }
-
   td {
     @apply p-2 border-b-2 border-solid border-gray-400;
   }
-  td:first-child {
-    @apply pl-3 sticky left-0 bg-white dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800;
-  }
+
   td:last-child {
     @apply px-2 py-1;
   }

@@ -40,7 +40,7 @@ export default function Home() {
             <table>
               <thead>
                 <tr>
-                  <th className='sticky z-20 left-0 bg-amber-200 dark:bg-rose-950 shadow-lg-r'>
+                  <th >
                     Product
                   </th>
                   <th>Price</th>
